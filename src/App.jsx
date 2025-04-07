@@ -3,6 +3,9 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Icons from "./components/Icons";
+import Challenges from "./components/Challenges";
+import { MdLanguage } from "react-icons/md";
+import ToggleTheme from "./components/ToggleTheme";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +33,10 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Icons />
+      <img src="https://flagcdn.com/us.svg" alt="English" className="w-6 h-4" />
+      <Challenges />
+      <MdLanguage size={24} color="black" />
+      <ToggleTheme />
     </>
   );
 }
