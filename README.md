@@ -62,4 +62,51 @@ rules: {
 },
 ];
 
+## github actions and linting and formatting
 
+##### under .github/workflows/main.yml
+
+name: CI/CD Pipeline
+
+on:
+pull_request:
+branches: - main - develop
+
+jobs:
+build:
+runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Prettier Check
+        run: npm run format:check
+
+##
+
+##### under .github/dependabot.yml
+
+version: 2
+updates:
+
+- package-ecosystem: 'npm'
+  directory: '/'
+  schedule:
+  interval: 'weekly'
+  open-pull-requests-limit: 10
+  target-branch: 'develop'
+  labels:
+  - 'dependencies'
+  - 'automerge'
