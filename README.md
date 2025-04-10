@@ -110,3 +110,20 @@ updates:
   labels:
   - 'dependencies'
   - 'automerge'
+
+## Husky setup
+
+##### under.husky/pre-commit
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/\_/husky.sh"
+
+npx lint-staged
+
+##### under .github/pull_request_template.md
+
+Description
+Add short description about changes implemented
+
+Related Trello ticket
+Link Trello ticket here
