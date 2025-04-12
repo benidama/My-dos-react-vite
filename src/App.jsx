@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Icons from "./components/Icons";
 import Challenges from "./components/Challenges";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MdLanguage } from "react-icons/md";
 import ToggleTheme from "./components/ToggleTheme";
 
@@ -12,6 +13,13 @@ function App() {
 
   return (
     <>
+      <ToggleTheme />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
       <div className="text-center justify-center flex items-center">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -36,7 +44,6 @@ function App() {
       <img src="https://flagcdn.com/us.svg" alt="English" className="w-6 h-4" />
       <Challenges />
       <MdLanguage size={24} color="black" />
-      <ToggleTheme />
     </>
   );
 }
