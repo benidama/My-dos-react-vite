@@ -115,10 +115,17 @@ updates:
 
 ##### under.husky/pre-commit
 
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/\_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/\_/husky.sh"
 
 npx lint-staged
+
+##### under .husky/commit-msg
+
+#!/bin/sh
+. "$(dirname "$0")/\_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
 
 ##### under .github/pull_request_template.md
 
