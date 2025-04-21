@@ -9,6 +9,7 @@ import Challenges from "./components/Challenges";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MdLanguage } from "react-icons/md";
 import ToggleTheme from "./components/ToggleTheme";
+import SearchInputs from "./components/SearchInputs";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +47,7 @@ function App() {
       <img src="https://flagcdn.com/us.svg" alt="English" className="w-6 h-4" />
       <Challenges />
       <MdLanguage size={24} color="black" />
+      <SearchInputs placeholder="Location" Icon={MdLanguage} />
     </>
   );
 }
