@@ -40,9 +40,6 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs text-sm text-left">
-        Click on the Vite and React logos to learn more
-      </p>
       <Icons />
       <img src="https://flagcdn.com/us.svg" alt="English" className="w-6 h-4" />
       <Challenges />
