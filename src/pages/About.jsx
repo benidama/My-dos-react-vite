@@ -6,6 +6,7 @@ function About() {
         Here, there is a big match to watch because it is a very big one which
         is very full many suprises
       </p>
+      <h4 className="text-xl text-center">Hello my brothers</h4>
     </div>
   );
 }
