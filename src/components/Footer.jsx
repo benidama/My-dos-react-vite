@@ -63,7 +63,7 @@ const Footer = () => {
           salon booking and time-saving services.
         </p>
         <p className="text-[#E6E6FA] text-sm">
-          Copyright &copy; {year} SalonFlow.All rights reserved.
+          Copyright &copy; {year} SalonFlow.All rights reserved for all.
         </p>
       </div>
     </footer>
