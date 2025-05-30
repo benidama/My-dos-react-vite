@@ -4,7 +4,9 @@ import Flag from "react-world-flags";
 const Challenges = () => {
   return (
     <div>
-      <h1>I can do my JS challenges here.</h1>
+      <h1 className="text-4xl text-blue-900">
+        I can do my JS challenges here.
+      </h1>
       <Flag code="GB" className="w-[2rem]" />
       <p className="bg-white text-black dark:bg-gray-900 dark:text-white p-4">
         Hello, I'm styled based on theme! Lorem ipsum ad venum aquas, here I
